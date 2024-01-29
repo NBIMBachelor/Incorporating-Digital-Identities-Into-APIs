@@ -21,7 +21,7 @@ with open(input_file_path, 'r', encoding='utf-8') as file:
     # Define a regular expression pattern to match the exact words
     pattern = r'\b(' + '|'.join(map(re.escape, words_to_highlight)) + r')\b'
 
-    # Replace the matched words with \gls{word}
+    # Replace the matched words with \gls{word}n
     highlighted_content = re.sub(pattern, r'\\gls{\1}', content)
 
 # Open the output file for writing
