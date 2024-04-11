@@ -1,0 +1,902 @@
+[
+    {
+        "account_number": "63722059-6200",
+        "transaction_date": "2023-12-13",
+        "amount": 394.64,
+        "currency": "EUR",
+        "transaction_type": "Withdrawal",
+        "vendor": "McDonald's",
+        "category": "Entertainment"
+    },
+    {
+        "account_number": "84463349-5878",
+        "transaction_date": "2024-02-25",
+        "amount": 7044.91,
+        "currency": "USD",
+        "transaction_type": "Payment",
+        "vendor": "Target",
+        "category": "Rent"
+    },
+    {
+        "account_number": "30092662-8749",
+        "transaction_date": "2023-06-13",
+        "amount": 884.98,
+        "currency": "GBP",
+        "transaction_type": "Refund",
+        "vendor": "Amazon",
+        "category": "Groceries"
+    },
+    {
+        "account_number": "40805185-6778",
+        "transaction_date": "2023-06-21",
+        "amount": 6589.42,
+        "currency": "JPY",
+        "transaction_type": "Deposit",
+        "vendor": "eBay",
+        "category": "Food & Beverage"
+    },
+    {
+        "account_number": "55494152-1984",
+        "transaction_date": "2024-03-06",
+        "amount": 3287.11,
+        "currency": "GBP",
+        "transaction_type": "Refund",
+        "vendor": "Amazon",
+        "category": "Entertainment"
+    },
+    {
+        "account_number": "26783377-6116",
+        "transaction_date": "2023-05-16",
+        "amount": 3049.45,
+        "currency": "GBP",
+        "transaction_type": "Payment",
+        "vendor": "Walmart",
+        "category": "Food & Beverage"
+    },
+    {
+        "account_number": "24179796-7700",
+        "transaction_date": "2024-03-04",
+        "amount": 2422.2,
+        "currency": "USD",
+        "transaction_type": "Deposit",
+        "vendor": "Starbucks",
+        "category": "Utilities"
+    },
+    {
+        "account_number": "82806485-9693",
+        "transaction_date": "2023-10-22",
+        "amount": 6265.67,
+        "currency": "EUR",
+        "transaction_type": "Payment",
+        "vendor": "McDonald's",
+        "category": "Entertainment"
+    },
+    {
+        "account_number": "90865561-8581",
+        "transaction_date": "2023-11-27",
+        "amount": 7695.87,
+        "currency": "EUR",
+        "transaction_type": "Deposit",
+        "vendor": "Amazon",
+        "category": "Shopping"
+    },
+    {
+        "account_number": "47625637-9206",
+        "transaction_date": "2023-05-24",
+        "amount": 9724.02,
+        "currency": "GBP",
+        "transaction_type": "Withdrawal",
+        "vendor": "McDonald's",
+        "category": "Entertainment"
+    },
+    {
+        "account_number": "15423682-9562",
+        "transaction_date": "2024-01-15",
+        "amount": 2705.08,
+        "currency": "USD",
+        "transaction_type": "Refund",
+        "vendor": "Target",
+        "category": "Utilities"
+    },
+    {
+        "account_number": "87718581-5444",
+        "transaction_date": "2023-08-22",
+        "amount": 5423.32,
+        "currency": "GBP",
+        "transaction_type": "Deposit",
+        "vendor": "McDonald's",
+        "category": "Entertainment"
+    },
+    {
+        "account_number": "59852524-1773",
+        "transaction_date": "2024-02-26",
+        "amount": 6343.06,
+        "currency": "JPY",
+        "transaction_type": "Withdrawal",
+        "vendor": "eBay",
+        "category": "Entertainment"
+    },
+    {
+        "account_number": "91477217-5423",
+        "transaction_date": "2024-03-05",
+        "amount": 5806.93,
+        "currency": "JPY",
+        "transaction_type": "Refund",
+        "vendor": "Starbucks",
+        "category": "Food & Beverage"
+    },
+    {
+        "account_number": "22827704-3908",
+        "transaction_date": "2024-03-27",
+        "amount": 9680.53,
+        "currency": "EUR",
+        "transaction_type": "Payment",
+        "vendor": "McDonald's",
+        "category": "Entertainment"
+    },
+    {
+        "account_number": "24371741-4994",
+        "transaction_date": "2024-03-04",
+        "amount": 2274.72,
+        "currency": "EUR",
+        "transaction_type": "Refund",
+        "vendor": "McDonald's",
+        "category": "Food & Beverage"
+    },
+    {
+        "account_number": "69700876-9815",
+        "transaction_date": "2024-01-14",
+        "amount": 7466.57,
+        "currency": "EUR",
+        "transaction_type": "Deposit",
+        "vendor": "Amazon",
+        "category": "Entertainment"
+    },
+    {
+        "account_number": "73591753-6627",
+        "transaction_date": "2023-04-19",
+        "amount": 8045.49,
+        "currency": "JPY",
+        "transaction_type": "Payment",
+        "vendor": "Starbucks",
+        "category": "Food & Beverage"
+    },
+    {
+        "account_number": "10093858-4771",
+        "transaction_date": "2023-06-18",
+        "amount": 1075.78,
+        "currency": "JPY",
+        "transaction_type": "Withdrawal",
+        "vendor": "Starbucks",
+        "category": "Groceries"
+    },
+    {
+        "account_number": "60709138-7240",
+        "transaction_date": "2023-12-26",
+        "amount": 9331.77,
+        "currency": "JPY",
+        "transaction_type": "Payment",
+        "vendor": "Target",
+        "category": "Shopping"
+    },
+    {
+        "account_number": "76949068-6824",
+        "transaction_date": "2023-08-20",
+        "amount": 798.2,
+        "currency": "USD",
+        "transaction_type": "Payment",
+        "vendor": "Amazon",
+        "category": "Food & Beverage"
+    },
+    {
+        "account_number": "59083375-9389",
+        "transaction_date": "2023-11-23",
+        "amount": 9271.1,
+        "currency": "EUR",
+        "transaction_type": "Payment",
+        "vendor": "Amazon",
+        "category": "Food & Beverage"
+    },
+    {
+        "account_number": "33929883-3459",
+        "transaction_date": "2023-07-17",
+        "amount": 558.02,
+        "currency": "EUR",
+        "transaction_type": "Withdrawal",
+        "vendor": "McDonald's",
+        "category": "Shopping"
+    },
+    {
+        "account_number": "91700285-3631",
+        "transaction_date": "2024-03-23",
+        "amount": 3290.73,
+        "currency": "USD",
+        "transaction_type": "Deposit",
+        "vendor": "Starbucks",
+        "category": "Groceries"
+    },
+    {
+        "account_number": "81988049-5357",
+        "transaction_date": "2023-05-31",
+        "amount": 365.35,
+        "currency": "EUR",
+        "transaction_type": "Deposit",
+        "vendor": "Amazon",
+        "category": "Entertainment"
+    },
+    {
+        "account_number": "89577739-1243",
+        "transaction_date": "2023-08-19",
+        "amount": 3482.61,
+        "currency": "JPY",
+        "transaction_type": "Deposit",
+        "vendor": "Target",
+        "category": "Rent"
+    },
+    {
+        "account_number": "42410770-2919",
+        "transaction_date": "2024-04-03",
+        "amount": 6863.72,
+        "currency": "EUR",
+        "transaction_type": "Withdrawal",
+        "vendor": "McDonald's",
+        "category": "Shopping"
+    },
+    {
+        "account_number": "77374949-3628",
+        "transaction_date": "2023-05-20",
+        "amount": 3749.19,
+        "currency": "JPY",
+        "transaction_type": "Payment",
+        "vendor": "McDonald's",
+        "category": "Entertainment"
+    },
+    {
+        "account_number": "65970552-6565",
+        "transaction_date": "2024-04-08",
+        "amount": 8776.77,
+        "currency": "JPY",
+        "transaction_type": "Payment",
+        "vendor": "Walmart",
+        "category": "Entertainment"
+    },
+    {
+        "account_number": "94659910-8824",
+        "transaction_date": "2023-07-07",
+        "amount": 9683.44,
+        "currency": "JPY",
+        "transaction_type": "Deposit",
+        "vendor": "McDonald's",
+        "category": "Shopping"
+    },
+    {
+        "account_number": "97233001-9607",
+        "transaction_date": "2023-07-09",
+        "amount": 9550.75,
+        "currency": "GBP",
+        "transaction_type": "Payment",
+        "vendor": "Amazon",
+        "category": "Rent"
+    },
+    {
+        "account_number": "80106303-9123",
+        "transaction_date": "2023-07-01",
+        "amount": 4157.25,
+        "currency": "GBP",
+        "transaction_type": "Deposit",
+        "vendor": "eBay",
+        "category": "Food & Beverage"
+    },
+    {
+        "account_number": "84701954-7032",
+        "transaction_date": "2023-06-25",
+        "amount": 3145.36,
+        "currency": "EUR",
+        "transaction_type": "Withdrawal",
+        "vendor": "Amazon",
+        "category": "Rent"
+    },
+    {
+        "account_number": "69083364-7311",
+        "transaction_date": "2024-04-02",
+        "amount": 2053.81,
+        "currency": "JPY",
+        "transaction_type": "Payment",
+        "vendor": "Amazon",
+        "category": "Food & Beverage"
+    },
+    {
+        "account_number": "90791605-5759",
+        "transaction_date": "2023-06-04",
+        "amount": 2128.69,
+        "currency": "EUR",
+        "transaction_type": "Deposit",
+        "vendor": "eBay",
+        "category": "Groceries"
+    },
+    {
+        "account_number": "39264115-3164",
+        "transaction_date": "2023-04-21",
+        "amount": 2226.84,
+        "currency": "USD",
+        "transaction_type": "Payment",
+        "vendor": "Walmart",
+        "category": "Shopping"
+    },
+    {
+        "account_number": "90755860-6209",
+        "transaction_date": "2024-01-27",
+        "amount": 3791.8,
+        "currency": "JPY",
+        "transaction_type": "Deposit",
+        "vendor": "Walmart",
+        "category": "Entertainment"
+    },
+    {
+        "account_number": "41935153-5214",
+        "transaction_date": "2024-01-28",
+        "amount": 2832.65,
+        "currency": "USD",
+        "transaction_type": "Refund",
+        "vendor": "Walmart",
+        "category": "Utilities"
+    },
+    {
+        "account_number": "74334747-1366",
+        "transaction_date": "2024-03-22",
+        "amount": 6629.81,
+        "currency": "JPY",
+        "transaction_type": "Withdrawal",
+        "vendor": "Target",
+        "category": "Shopping"
+    },
+    {
+        "account_number": "55621909-8422",
+        "transaction_date": "2023-06-15",
+        "amount": 2695.19,
+        "currency": "GBP",
+        "transaction_type": "Withdrawal",
+        "vendor": "McDonald's",
+        "category": "Rent"
+    },
+    {
+        "account_number": "56059267-8656",
+        "transaction_date": "2024-02-26",
+        "amount": 687.36,
+        "currency": "JPY",
+        "transaction_type": "Withdrawal",
+        "vendor": "Amazon",
+        "category": "Food & Beverage"
+    },
+    {
+        "account_number": "15923802-3433",
+        "transaction_date": "2023-09-22",
+        "amount": 2603.92,
+        "currency": "USD",
+        "transaction_type": "Withdrawal",
+        "vendor": "McDonald's",
+        "category": "Entertainment"
+    },
+    {
+        "account_number": "75212219-7425",
+        "transaction_date": "2023-08-04",
+        "amount": 9313.45,
+        "currency": "EUR",
+        "transaction_type": "Deposit",
+        "vendor": "Walmart",
+        "category": "Food & Beverage"
+    },
+    {
+        "account_number": "55355053-8923",
+        "transaction_date": "2023-07-25",
+        "amount": 6371.78,
+        "currency": "JPY",
+        "transaction_type": "Refund",
+        "vendor": "Starbucks",
+        "category": "Groceries"
+    },
+    {
+        "account_number": "23864083-7747",
+        "transaction_date": "2024-02-09",
+        "amount": 4748.74,
+        "currency": "JPY",
+        "transaction_type": "Withdrawal",
+        "vendor": "Starbucks",
+        "category": "Entertainment"
+    },
+    {
+        "account_number": "11280112-5345",
+        "transaction_date": "2023-04-12",
+        "amount": 980.19,
+        "currency": "EUR",
+        "transaction_type": "Withdrawal",
+        "vendor": "McDonald's",
+        "category": "Rent"
+    },
+    {
+        "account_number": "72097471-1399",
+        "transaction_date": "2024-01-20",
+        "amount": 8946.39,
+        "currency": "GBP",
+        "transaction_type": "Payment",
+        "vendor": "Starbucks",
+        "category": "Groceries"
+    },
+    {
+        "account_number": "27530059-7739",
+        "transaction_date": "2023-09-17",
+        "amount": 7333.26,
+        "currency": "USD",
+        "transaction_type": "Payment",
+        "vendor": "Starbucks",
+        "category": "Shopping"
+    },
+    {
+        "account_number": "39065192-5610",
+        "transaction_date": "2024-02-12",
+        "amount": 9299.05,
+        "currency": "JPY",
+        "transaction_type": "Deposit",
+        "vendor": "Amazon",
+        "category": "Rent"
+    },
+    {
+        "account_number": "68152211-3642",
+        "transaction_date": "2024-03-29",
+        "amount": 7529.42,
+        "currency": "JPY",
+        "transaction_type": "Withdrawal",
+        "vendor": "Amazon",
+        "category": "Entertainment"
+    },
+    {
+        "account_number": "53288225-4817",
+        "transaction_date": "2023-08-23",
+        "amount": 5871.37,
+        "currency": "JPY",
+        "transaction_type": "Payment",
+        "vendor": "McDonald's",
+        "category": "Entertainment"
+    },
+    {
+        "account_number": "37906159-4155",
+        "transaction_date": "2023-12-11",
+        "amount": 7012.56,
+        "currency": "EUR",
+        "transaction_type": "Refund",
+        "vendor": "Starbucks",
+        "category": "Food & Beverage"
+    },
+    {
+        "account_number": "27642897-7170",
+        "transaction_date": "2024-01-01",
+        "amount": 1175.66,
+        "currency": "GBP",
+        "transaction_type": "Deposit",
+        "vendor": "eBay",
+        "category": "Food & Beverage"
+    },
+    {
+        "account_number": "64345672-6459",
+        "transaction_date": "2023-12-25",
+        "amount": 6962.45,
+        "currency": "USD",
+        "transaction_type": "Withdrawal",
+        "vendor": "Starbucks",
+        "category": "Rent"
+    },
+    {
+        "account_number": "66909347-3345",
+        "transaction_date": "2023-08-26",
+        "amount": 2425.57,
+        "currency": "USD",
+        "transaction_type": "Payment",
+        "vendor": "eBay",
+        "category": "Utilities"
+    },
+    {
+        "account_number": "71539800-1403",
+        "transaction_date": "2024-01-20",
+        "amount": 6792.97,
+        "currency": "JPY",
+        "transaction_type": "Deposit",
+        "vendor": "Starbucks",
+        "category": "Entertainment"
+    },
+    {
+        "account_number": "33388323-3123",
+        "transaction_date": "2023-07-05",
+        "amount": 7425.35,
+        "currency": "JPY",
+        "transaction_type": "Deposit",
+        "vendor": "eBay",
+        "category": "Utilities"
+    },
+    {
+        "account_number": "67968558-7644",
+        "transaction_date": "2023-04-23",
+        "amount": 2296.22,
+        "currency": "USD",
+        "transaction_type": "Withdrawal",
+        "vendor": "Starbucks",
+        "category": "Groceries"
+    },
+    {
+        "account_number": "51784276-6588",
+        "transaction_date": "2024-03-02",
+        "amount": 9784.27,
+        "currency": "JPY",
+        "transaction_type": "Withdrawal",
+        "vendor": "Starbucks",
+        "category": "Food & Beverage"
+    },
+    {
+        "account_number": "48363645-3136",
+        "transaction_date": "2023-05-08",
+        "amount": 1875.13,
+        "currency": "GBP",
+        "transaction_type": "Withdrawal",
+        "vendor": "Target",
+        "category": "Groceries"
+    },
+    {
+        "account_number": "93304057-6273",
+        "transaction_date": "2023-11-15",
+        "amount": 6781.03,
+        "currency": "GBP",
+        "transaction_type": "Payment",
+        "vendor": "McDonald's",
+        "category": "Shopping"
+    },
+    {
+        "account_number": "63685566-7421",
+        "transaction_date": "2023-05-25",
+        "amount": 3654.32,
+        "currency": "JPY",
+        "transaction_type": "Withdrawal",
+        "vendor": "eBay",
+        "category": "Groceries"
+    },
+    {
+        "account_number": "39287285-9693",
+        "transaction_date": "2023-05-14",
+        "amount": 939.03,
+        "currency": "EUR",
+        "transaction_type": "Refund",
+        "vendor": "Starbucks",
+        "category": "Shopping"
+    },
+    {
+        "account_number": "51876285-3743",
+        "transaction_date": "2023-05-24",
+        "amount": 4524.35,
+        "currency": "JPY",
+        "transaction_type": "Refund",
+        "vendor": "Amazon",
+        "category": "Groceries"
+    },
+    {
+        "account_number": "12335238-6501",
+        "transaction_date": "2023-06-22",
+        "amount": 8701.81,
+        "currency": "GBP",
+        "transaction_type": "Deposit",
+        "vendor": "Walmart",
+        "category": "Shopping"
+    },
+    {
+        "account_number": "42936900-1731",
+        "transaction_date": "2023-10-11",
+        "amount": 2284.68,
+        "currency": "GBP",
+        "transaction_type": "Refund",
+        "vendor": "Amazon",
+        "category": "Groceries"
+    },
+    {
+        "account_number": "98423347-8368",
+        "transaction_date": "2023-12-16",
+        "amount": 7822.61,
+        "currency": "JPY",
+        "transaction_type": "Deposit",
+        "vendor": "eBay",
+        "category": "Rent"
+    },
+    {
+        "account_number": "41751565-9536",
+        "transaction_date": "2023-04-14",
+        "amount": 3922.76,
+        "currency": "JPY",
+        "transaction_type": "Deposit",
+        "vendor": "Amazon",
+        "category": "Shopping"
+    },
+    {
+        "account_number": "50274620-1553",
+        "transaction_date": "2024-02-12",
+        "amount": 1217.75,
+        "currency": "JPY",
+        "transaction_type": "Withdrawal",
+        "vendor": "McDonald's",
+        "category": "Food & Beverage"
+    },
+    {
+        "account_number": "50651605-8563",
+        "transaction_date": "2023-11-15",
+        "amount": 1307.89,
+        "currency": "JPY",
+        "transaction_type": "Withdrawal",
+        "vendor": "Amazon",
+        "category": "Food & Beverage"
+    },
+    {
+        "account_number": "24918353-3880",
+        "transaction_date": "2023-11-09",
+        "amount": 8929.62,
+        "currency": "JPY",
+        "transaction_type": "Payment",
+        "vendor": "eBay",
+        "category": "Entertainment"
+    },
+    {
+        "account_number": "95409991-6047",
+        "transaction_date": "2024-01-20",
+        "amount": 7221.35,
+        "currency": "USD",
+        "transaction_type": "Refund",
+        "vendor": "Walmart",
+        "category": "Groceries"
+    },
+    {
+        "account_number": "59062024-6280",
+        "transaction_date": "2024-03-19",
+        "amount": 7881.43,
+        "currency": "GBP",
+        "transaction_type": "Refund",
+        "vendor": "McDonald's",
+        "category": "Rent"
+    },
+    {
+        "account_number": "68728363-2156",
+        "transaction_date": "2023-05-14",
+        "amount": 3678.16,
+        "currency": "EUR",
+        "transaction_type": "Deposit",
+        "vendor": "McDonald's",
+        "category": "Shopping"
+    },
+    {
+        "account_number": "53408991-1025",
+        "transaction_date": "2024-03-15",
+        "amount": 8467.86,
+        "currency": "EUR",
+        "transaction_type": "Deposit",
+        "vendor": "Starbucks",
+        "category": "Entertainment"
+    },
+    {
+        "account_number": "51538806-9602",
+        "transaction_date": "2023-05-10",
+        "amount": 7865.44,
+        "currency": "EUR",
+        "transaction_type": "Payment",
+        "vendor": "Amazon",
+        "category": "Groceries"
+    },
+    {
+        "account_number": "20849994-2470",
+        "transaction_date": "2023-12-05",
+        "amount": 2090.41,
+        "currency": "GBP",
+        "transaction_type": "Payment",
+        "vendor": "Amazon",
+        "category": "Utilities"
+    },
+    {
+        "account_number": "75429445-3380",
+        "transaction_date": "2023-11-07",
+        "amount": 7618.47,
+        "currency": "EUR",
+        "transaction_type": "Withdrawal",
+        "vendor": "Target",
+        "category": "Entertainment"
+    },
+    {
+        "account_number": "93702267-4714",
+        "transaction_date": "2024-01-15",
+        "amount": 5443.78,
+        "currency": "GBP",
+        "transaction_type": "Withdrawal",
+        "vendor": "Target",
+        "category": "Rent"
+    },
+    {
+        "account_number": "73010812-1890",
+        "transaction_date": "2023-05-26",
+        "amount": 9663.98,
+        "currency": "EUR",
+        "transaction_type": "Deposit",
+        "vendor": "eBay",
+        "category": "Utilities"
+    },
+    {
+        "account_number": "96722895-4427",
+        "transaction_date": "2023-06-29",
+        "amount": 1819.75,
+        "currency": "JPY",
+        "transaction_type": "Withdrawal",
+        "vendor": "Starbucks",
+        "category": "Rent"
+    },
+    {
+        "account_number": "47007202-2969",
+        "transaction_date": "2023-08-09",
+        "amount": 9036.96,
+        "currency": "USD",
+        "transaction_type": "Deposit",
+        "vendor": "eBay",
+        "category": "Food & Beverage"
+    },
+    {
+        "account_number": "30569878-7011",
+        "transaction_date": "2024-03-16",
+        "amount": 6293.69,
+        "currency": "GBP",
+        "transaction_type": "Payment",
+        "vendor": "Target",
+        "category": "Food & Beverage"
+    },
+    {
+        "account_number": "42461410-8210",
+        "transaction_date": "2024-03-27",
+        "amount": 1747.41,
+        "currency": "JPY",
+        "transaction_type": "Payment",
+        "vendor": "Target",
+        "category": "Shopping"
+    },
+    {
+        "account_number": "95714122-8851",
+        "transaction_date": "2023-11-26",
+        "amount": 1217.13,
+        "currency": "JPY",
+        "transaction_type": "Payment",
+        "vendor": "Target",
+        "category": "Food & Beverage"
+    },
+    {
+        "account_number": "36362024-9284",
+        "transaction_date": "2023-05-25",
+        "amount": 4023.12,
+        "currency": "JPY",
+        "transaction_type": "Deposit",
+        "vendor": "eBay",
+        "category": "Food & Beverage"
+    },
+    {
+        "account_number": "86523084-4519",
+        "transaction_date": "2023-07-09",
+        "amount": 271.76,
+        "currency": "GBP",
+        "transaction_type": "Withdrawal",
+        "vendor": "eBay",
+        "category": "Rent"
+    },
+    {
+        "account_number": "96886781-3768",
+        "transaction_date": "2024-01-17",
+        "amount": 8725.7,
+        "currency": "EUR",
+        "transaction_type": "Withdrawal",
+        "vendor": "McDonald's",
+        "category": "Entertainment"
+    },
+    {
+        "account_number": "65992125-3816",
+        "transaction_date": "2023-06-06",
+        "amount": 6946.79,
+        "currency": "EUR",
+        "transaction_type": "Deposit",
+        "vendor": "Walmart",
+        "category": "Rent"
+    },
+    {
+        "account_number": "70941894-9024",
+        "transaction_date": "2024-01-16",
+        "amount": 3000.62,
+        "currency": "GBP",
+        "transaction_type": "Deposit",
+        "vendor": "Starbucks",
+        "category": "Food & Beverage"
+    },
+    {
+        "account_number": "51674349-7312",
+        "transaction_date": "2024-03-10",
+        "amount": 8643.65,
+        "currency": "JPY",
+        "transaction_type": "Refund",
+        "vendor": "eBay",
+        "category": "Utilities"
+    },
+    {
+        "account_number": "96738422-4086",
+        "transaction_date": "2023-08-03",
+        "amount": 9226.57,
+        "currency": "USD",
+        "transaction_type": "Refund",
+        "vendor": "Amazon",
+        "category": "Entertainment"
+    },
+    {
+        "account_number": "60738370-4589",
+        "transaction_date": "2023-12-11",
+        "amount": 1977.47,
+        "currency": "GBP",
+        "transaction_type": "Deposit",
+        "vendor": "McDonald's",
+        "category": "Entertainment"
+    },
+    {
+        "account_number": "19155704-6101",
+        "transaction_date": "2023-09-11",
+        "amount": 7441.44,
+        "currency": "USD",
+        "transaction_type": "Payment",
+        "vendor": "Amazon",
+        "category": "Shopping"
+    },
+    {
+        "account_number": "36742559-1785",
+        "transaction_date": "2023-12-17",
+        "amount": 1063.06,
+        "currency": "JPY",
+        "transaction_type": "Payment",
+        "vendor": "Starbucks",
+        "category": "Entertainment"
+    },
+    {
+        "account_number": "34823830-3103",
+        "transaction_date": "2023-11-26",
+        "amount": 6499.4,
+        "currency": "USD",
+        "transaction_type": "Deposit",
+        "vendor": "eBay",
+        "category": "Utilities"
+    },
+    {
+        "account_number": "99082863-5137",
+        "transaction_date": "2023-06-21",
+        "amount": 7041.23,
+        "currency": "GBP",
+        "transaction_type": "Deposit",
+        "vendor": "Amazon",
+        "category": "Entertainment"
+    },
+    {
+        "account_number": "31422567-8056",
+        "transaction_date": "2024-03-05",
+        "amount": 7807.12,
+        "currency": "GBP",
+        "transaction_type": "Deposit",
+        "vendor": "Walmart",
+        "category": "Utilities"
+    },
+    {
+        "account_number": "55047720-3453",
+        "transaction_date": "2023-06-27",
+        "amount": 7769.16,
+        "currency": "EUR",
+        "transaction_type": "Withdrawal",
+        "vendor": "eBay",
+        "category": "Utilities"
+    },
+    {
+        "account_number": "12526135-1363",
+        "transaction_date": "2023-06-23",
+        "amount": 140.85,
+        "currency": "EUR",
+        "transaction_type": "Withdrawal",
+        "vendor": "Walmart",
+        "category": "Food & Beverage"
+    }
+]
