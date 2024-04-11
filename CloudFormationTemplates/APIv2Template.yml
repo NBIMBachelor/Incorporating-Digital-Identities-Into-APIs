@@ -1,0 +1,307 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: "Proof of concept API with Cloudfront WAF and 3 endpoints with jwt auth"
+Resources:
+    PoCAPI:
+        Type: AWS::ApiGatewayV2::Api
+        Properties:
+            Name: PoCAPI
+            ApiKeySelectionExpression: $request.header.x-api-key
+            ProtocolType: HTTP
+            RouteSelectionExpression: $request.method $request.path
+
+    ApiGatewayV2Route:
+        Type: "AWS::ApiGatewayV2::Route"
+        Properties:
+            ApiId: !Ref PoCAPI
+            ApiKeyRequired: false
+            AuthorizationScopes: 
+              - "azuread.scope"
+              - "azurewrite.scope"
+            AuthorizationType: "JWT"
+            AuthorizerId: !Ref ApiGatewayV2Authorizer
+            RouteKey: "GET /transactions"
+            Target: !Sub "integrations/${ApiGatewayV2Integration}"
+
+    ApiGatewayV2Route2:
+        Type: "AWS::ApiGatewayV2::Route"
+        Properties:
+            ApiId: !Ref PoCAPI
+            ApiKeyRequired: false
+            AuthorizationScopes: 
+              - "azuread.scope"
+            AuthorizationType: "JWT"
+            AuthorizerId: !Ref ApiGatewayV2Authorizer
+            RouteKey: "GET /employees"
+            Target: !Sub "integrations/${ApiGatewayV2Integration2}"
+
+    ApiGatewayV2Route3:
+        Type: "AWS::ApiGatewayV2::Route"
+        Properties:
+            ApiId: !Ref PoCAPI
+            ApiKeyRequired: false
+            AuthorizationScopes: 
+              - "azuread.scope"
+            AuthorizationType: "JWT"
+            AuthorizerId: !Ref ApiGatewayV2Authorizer
+            RouteKey: "GET /devprojects"
+            Target: !Sub "integrations/${ApiGatewayV2Integration3}"
+
+    ApiGatewayV2Integration:
+        Type: "AWS::ApiGatewayV2::Integration"
+        Properties:
+            ApiId: !Ref PoCAPI
+            ConnectionType: "INTERNET"
+            IntegrationMethod: "GET"
+            IntegrationType: "HTTP_PROXY"
+            IntegrationUri: "https://raw.githubusercontent.com/NBIMBachelor/Incorporating-Digital-Identities-Into-APIs/main/MockData/mock_transactions.json"
+            TimeoutInMillis: 30000
+            PayloadFormatVersion: "1.0"
+
+    ApiGatewayV2Integration2:
+        Type: "AWS::ApiGatewayV2::Integration"
+        Properties:
+            ApiId: !Ref PoCAPI
+            ConnectionType: "INTERNET"
+            IntegrationMethod: "ANY"
+            IntegrationType: "HTTP_PROXY"
+            IntegrationUri: "https://raw.githubusercontent.com/NBIMBachelor/Incorporating-Digital-Identities-Into-APIs/main/MockData/mock_employees.json"
+            TimeoutInMillis: 30000
+            PayloadFormatVersion: "1.0"
+
+    ApiGatewayV2Integration3:
+        Type: "AWS::ApiGatewayV2::Integration"
+        Properties:
+            ApiId: !Ref PoCAPI
+            ConnectionType: "INTERNET"
+            IntegrationMethod: "ANY"
+            IntegrationType: "HTTP_PROXY"
+            IntegrationUri: "https://raw.githubusercontent.com/NBIMBachelor/Incorporating-Digital-Identities-Into-APIs/main/MockData/mock_devprojects.json"
+            TimeoutInMillis: 30000
+            PayloadFormatVersion: "1.0"
+
+    ApiGatewayV2Authorizer:
+        Type: "AWS::ApiGatewayV2::Authorizer"
+        Properties:
+            ApiId: !Ref PoCAPI
+            AuthorizerType: "JWT"
+            IdentitySource: 
+              - "$request.header.Authorization"
+            Name: "JWTAuth"
+            JwtConfiguration: 
+                Audience: 
+                  - "2453bdf8-806b-4b13-a6d2-8114d2b47198"
+                Issuer: "https://sts.windows.net/41044b51-225a-4a49-8312-0613d4946cff/"
+
+    ApiGatewayV2Authorizer2:
+        Type: "AWS::ApiGatewayV2::Authorizer"
+        Properties:
+            ApiId: !Ref PoCAPI
+            AuthorizerType: "JWT"
+            IdentitySource: 
+              - "$request.header.Authorization"
+            Name: "AzureADB2CJWTAuthorizer"
+            JwtConfiguration: 
+                Audience: 
+                  - "https://patolalive.onmicrosoft.com/89f97c87-c567-4422-b10c-b5f4454fca16"
+                Issuer: "https://patolalive.b2clogin.com/tfp/8d992d27-b56c-4a95-945a-c1e30321fc82/b2x_1_testsso/v2.0/"
+
+    ApiGatewayV2Stage:
+        Type: "AWS::ApiGatewayV2::Stage"
+        Properties:
+            StageName: "$default"
+            StageVariables: {}
+            ApiId: !Ref PoCAPI
+            RouteSettings: {}
+            DefaultRouteSettings: 
+                DetailedMetricsEnabled: false
+            AutoDeploy: true
+
+    BankingWAF:
+        Type: AWS::WAFv2::WebACL
+        Properties:
+            DefaultAction:
+               Allow: {}
+            Scope: CLOUDFRONT
+            VisibilityConfig:
+                SampledRequestsEnabled: true
+                CloudWatchMetricsEnabled: true
+                MetricName: WebACLBotAndSecurityProtection
+            Rules:
+              - Name: IPv4SetRule
+                Priority: 1
+                VisibilityConfig:
+                    SampledRequestsEnabled: true
+                    CloudWatchMetricsEnabled: true
+                    MetricName: BankingWAFMetricIPv4
+                Action:
+                    Block: {}
+                Statement:
+                    NotStatement:
+                        Statement:
+                            IPSetReferenceStatement:
+                                Arn: !GetAtt WAFIPv4.Arn
+              - Name: IPv6SetRule
+                Priority: 2
+                VisibilityConfig:
+                    SampledRequestsEnabled: true
+                    CloudWatchMetricsEnabled: true
+                    MetricName: BankingWAFMetricIPv6
+                Action:
+                    Block: {}
+                Statement:
+                    NotStatement:
+                        Statement:
+                            IPSetReferenceStatement:
+                                Arn: !GetAtt WAFIPv6.Arn
+              - Name: AWSManagedRulesBotControlRuleSet
+                Priority: 11
+                Statement:
+                    ManagedRuleGroupStatement:
+                        VendorName: AWS
+                        Name: AWSManagedRulesBotControlRuleSet
+                OverrideAction:
+                    None: {}
+                VisibilityConfig:
+                    SampledRequestsEnabled: true
+                    CloudWatchMetricsEnabled: true
+                    MetricName: BotControlRule
+              - Name: AWSManagedRulesAdminProtectionRuleSet
+                Priority: 21
+                Statement:
+                    ManagedRuleGroupStatement:
+                        VendorName: AWS
+                        Name: AWSManagedRulesAdminProtectionRuleSet
+                OverrideAction:
+                    None: {}
+                VisibilityConfig:
+                    SampledRequestsEnabled: true
+                    CloudWatchMetricsEnabled: true
+                    MetricName: AdminProtectionRule
+              - Name: AWSManagedRulesAmazonIpReputationList
+                Priority: 3
+                Statement:
+                    ManagedRuleGroupStatement:
+                        VendorName: AWS
+                        Name: AWSManagedRulesAmazonIpReputationList
+                OverrideAction:
+                    None: {}
+                VisibilityConfig:
+                    SampledRequestsEnabled: true
+                    CloudWatchMetricsEnabled: true
+                    MetricName: AmazonIpReputationListRule
+              - Name: AWSManagedRulesAnonymousIpList
+                Priority: 4
+                Statement:
+                    ManagedRuleGroupStatement:
+                        VendorName: AWS
+                        Name: AWSManagedRulesAnonymousIpList
+                OverrideAction:
+                    None: {}
+                VisibilityConfig:
+                    SampledRequestsEnabled: true
+                    CloudWatchMetricsEnabled: true
+                    MetricName: AnonymousIpListRule
+              - Name: AWSManagedRulesCommonRuleSet
+                Priority: 5
+                Statement:
+                    ManagedRuleGroupStatement:
+                        VendorName: AWS
+                        Name: AWSManagedRulesCommonRuleSet
+                OverrideAction:
+                    None: {}
+                VisibilityConfig:
+                    SampledRequestsEnabled: true
+                    CloudWatchMetricsEnabled: true
+                    MetricName: CommonRuleSet
+              - Name: AWSManagedRulesKnownBadInputsRuleSet
+                Priority: 6
+                Statement:
+                    ManagedRuleGroupStatement:
+                        VendorName: AWS
+                        Name: AWSManagedRulesKnownBadInputsRuleSet
+                OverrideAction:
+                    None: {}
+                VisibilityConfig:
+                    SampledRequestsEnabled: true
+                    CloudWatchMetricsEnabled: true
+                    MetricName: KnownBadInputsRule
+              - Name: AWSManagedRulesLinuxRuleSet
+                Priority: 7
+                Statement:
+                    ManagedRuleGroupStatement:
+                        VendorName: AWS
+                        Name: AWSManagedRulesLinuxRuleSet
+                OverrideAction:
+                    None: {}
+                VisibilityConfig:
+                    SampledRequestsEnabled: true
+                    CloudWatchMetricsEnabled: true
+                    MetricName: LinuxRuleSet
+
+    CloudFrontDistribution:
+        Type: "AWS::CloudFront::Distribution"
+        Properties:
+            DistributionConfig: 
+                WebACLId: !Ref BankingWAF
+                Origins: 
+                  - OriginShield:
+                        Enabled: true
+                        OriginShieldRegion: eu-west-2
+                    ConnectionAttempts: 3
+                    ConnectionTimeout: 10
+                    CustomOriginConfig: 
+                        HTTPPort: 80
+                        HTTPSPort: 443
+                        OriginKeepaliveTimeout: 5
+                        OriginProtocolPolicy: "https-only"
+                        OriginReadTimeout: 30
+                        OriginSSLProtocols: 
+                          - "TLSv1.2"
+                    DomainName: !Sub "${PoCAPI}.execute-api.${AWS::Region}.amazonaws.com"
+                    Id: !Sub "${PoCAPI}.execute-api.${AWS::Region}.amazonaws.com"
+                    OriginPath: ""
+                
+                DefaultCacheBehavior: 
+                    AllowedMethods: 
+                      - "HEAD"
+                      - "GET"
+                    CachedMethods: 
+                      - "HEAD"
+                      - "GET"
+                    Compress: true
+                    CachePolicyId: "4135ea2d-6df8-44a3-9df3-4b5a84be39ad"
+                    OriginRequestPolicyId: "b689b0a8-53d0-40ab-baf2-68738e2966ac"
+                    SmoothStreaming: false
+                    TargetOriginId: !Sub "${PoCAPI}.execute-api.${AWS::Region}.amazonaws.com"
+                    ViewerProtocolPolicy: "redirect-to-https"
+                Comment: ""
+                PriceClass: "PriceClass_All"
+                Enabled: true
+                Restrictions: 
+                    GeoRestriction: 
+                        RestrictionType: "none"
+                WebACLId: 
+                    !GetAtt BankingWAF.Arn
+                HttpVersion: "http2"
+                DefaultRootObject: ""
+                IPV6Enabled: true
+
+    WAFIPv4:
+        Type: 'AWS::WAFv2::IPSet'
+        Properties:
+            Description: NTNU IPv4 range
+            Name: NTNUIPv4
+            Scope: CLOUDFRONT
+            IPAddressVersion: IPV4
+            Addresses:
+              - 129.240.0.0/15
+
+    WAFIPv6:
+        Type: 'AWS::WAFv2::IPSet'
+        Properties:
+            Description: NTNU IPv6 range
+            Name: NTNUIPv6
+            Scope: CLOUDFRONT
+            IPAddressVersion: IPV6
+            Addresses:
+              - 2001:0700:0300:0000:0000:0000:0000:0000/44
