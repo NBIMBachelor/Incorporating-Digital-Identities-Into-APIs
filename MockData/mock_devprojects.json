@@ -1,0 +1,452 @@
+[
+    {
+        "project": "Fraud Detection System",
+        "task_id": "FINDEV-137",
+        "task_description": "Train model on transaction data",
+        "priority": "Medium",
+        "status": "In Progress",
+        "assigned_to": "Joseph Hunt",
+        "due_date": "2024-06-21"
+    },
+    {
+        "project": "Payment Gateway Integration",
+        "task_id": "FINDEV-633",
+        "task_description": "Develop new gateway module",
+        "priority": "Low",
+        "status": "In Progress",
+        "assigned_to": "Spencer Lin",
+        "due_date": "2024-06-20"
+    },
+    {
+        "project": "Mobile App Revamp",
+        "task_id": "FINDEV-841",
+        "task_description": "Implement push notifications",
+        "priority": "High",
+        "status": "Not Started",
+        "assigned_to": "Tammy Jones",
+        "due_date": "2024-05-24"
+    },
+    {
+        "project": "Fraud Detection System",
+        "task_id": "FINDEV-512",
+        "task_description": "Train model on transaction data",
+        "priority": "Medium",
+        "status": "Not Started",
+        "assigned_to": "Alicia Brown",
+        "due_date": "2024-07-04"
+    },
+    {
+        "project": "Payment Gateway Integration",
+        "task_id": "FINDEV-746",
+        "task_description": "Develop new gateway module",
+        "priority": "High",
+        "status": "Not Started",
+        "assigned_to": "Pamela Wagner",
+        "due_date": "2024-06-14"
+    },
+    {
+        "project": "Mobile App Revamp",
+        "task_id": "FINDEV-275",
+        "task_description": "Add fingerprint login feature",
+        "priority": "High",
+        "status": "In Progress",
+        "assigned_to": "Pamela Wagner",
+        "due_date": "2024-07-08"
+    },
+    {
+        "project": "Payment Gateway Integration",
+        "task_id": "FINDEV-254",
+        "task_description": "Document API changes",
+        "priority": "High",
+        "status": "In Progress",
+        "assigned_to": "Lisa Madden",
+        "due_date": "2024-04-12"
+    },
+    {
+        "project": "Core Banking Upgrade",
+        "task_id": "FINDEV-163",
+        "task_description": "Upgrade database schema",
+        "priority": "Low",
+        "status": "Completed",
+        "assigned_to": "Pamela Wagner",
+        "due_date": "2024-06-15"
+    },
+    {
+        "project": "Mobile App Revamp",
+        "task_id": "FINDEV-136",
+        "task_description": "Add fingerprint login feature",
+        "priority": "Medium",
+        "status": "In Progress",
+        "assigned_to": "William Leblanc",
+        "due_date": "2024-05-21"
+    },
+    {
+        "project": "Payment Gateway Integration",
+        "task_id": "FINDEV-981",
+        "task_description": "Document API changes",
+        "priority": "Medium",
+        "status": "Not Started",
+        "assigned_to": "Darren Lutz",
+        "due_date": "2024-05-03"
+    },
+    {
+        "project": "Core Banking Upgrade",
+        "task_id": "FINDEV-182",
+        "task_description": "Upgrade database schema",
+        "priority": "Medium",
+        "status": "In Progress",
+        "assigned_to": "Natasha Holden",
+        "due_date": "2024-07-10"
+    },
+    {
+        "project": "Mobile App Revamp",
+        "task_id": "FINDEV-672",
+        "task_description": "Add fingerprint login feature",
+        "priority": "Medium",
+        "status": "Completed",
+        "assigned_to": "Bridget Miller",
+        "due_date": "2024-05-13"
+    },
+    {
+        "project": "Mobile App Revamp",
+        "task_id": "FINDEV-809",
+        "task_description": "Add fingerprint login feature",
+        "priority": "High",
+        "status": "In Progress",
+        "assigned_to": "Joseph Rich",
+        "due_date": "2024-06-25"
+    },
+    {
+        "project": "Payment Gateway Integration",
+        "task_id": "FINDEV-308",
+        "task_description": "Develop new gateway module",
+        "priority": "Low",
+        "status": "Not Started",
+        "assigned_to": "Anthony Williams",
+        "due_date": "2024-06-24"
+    },
+    {
+        "project": "Core Banking Upgrade",
+        "task_id": "FINDEV-987",
+        "task_description": "Upgrade database schema",
+        "priority": "Low",
+        "status": "Not Started",
+        "assigned_to": "Leah Goodman",
+        "due_date": "2024-05-23"
+    },
+    {
+        "project": "Fraud Detection System",
+        "task_id": "FINDEV-294",
+        "task_description": "Implement real-time monitoring",
+        "priority": "High",
+        "status": "Not Started",
+        "assigned_to": "Bridget Miller",
+        "due_date": "2024-06-12"
+    },
+    {
+        "project": "Payment Gateway Integration",
+        "task_id": "FINDEV-296",
+        "task_description": "Document API changes",
+        "priority": "Medium",
+        "status": "Not Started",
+        "assigned_to": "Sandra Carroll",
+        "due_date": "2024-06-15"
+    },
+    {
+        "project": "Core Banking Upgrade",
+        "task_id": "FINDEV-401",
+        "task_description": "Implement new encryption",
+        "priority": "Low",
+        "status": "In Progress",
+        "assigned_to": "Natasha Holden",
+        "due_date": "2024-06-01"
+    },
+    {
+        "project": "Core Banking Upgrade",
+        "task_id": "FINDEV-875",
+        "task_description": "Upgrade database schema",
+        "priority": "Medium",
+        "status": "Completed",
+        "assigned_to": "Joseph Rich",
+        "due_date": "2024-04-15"
+    },
+    {
+        "project": "Payment Gateway Integration",
+        "task_id": "FINDEV-256",
+        "task_description": "Document API changes",
+        "priority": "Low",
+        "status": "In Progress",
+        "assigned_to": "Joseph Hunt",
+        "due_date": "2024-04-14"
+    },
+    {
+        "project": "Core Banking Upgrade",
+        "task_id": "FINDEV-857",
+        "task_description": "Integrate new payment API",
+        "priority": "Medium",
+        "status": "In Progress",
+        "assigned_to": "William Leblanc",
+        "due_date": "2024-06-28"
+    },
+    {
+        "project": "Mobile App Revamp",
+        "task_id": "FINDEV-321",
+        "task_description": "Add fingerprint login feature",
+        "priority": "High",
+        "status": "Completed",
+        "assigned_to": "Spencer Lin",
+        "due_date": "2024-06-06"
+    },
+    {
+        "project": "Mobile App Revamp",
+        "task_id": "FINDEV-146",
+        "task_description": "Implement push notifications",
+        "priority": "Low",
+        "status": "In Progress",
+        "assigned_to": "Leah Goodman",
+        "due_date": "2024-05-25"
+    },
+    {
+        "project": "Fraud Detection System",
+        "task_id": "FINDEV-598",
+        "task_description": "Design fraud detection algorithm",
+        "priority": "Medium",
+        "status": "Completed",
+        "assigned_to": "George Haney",
+        "due_date": "2024-05-28"
+    },
+    {
+        "project": "Fraud Detection System",
+        "task_id": "FINDEV-458",
+        "task_description": "Design fraud detection algorithm",
+        "priority": "Medium",
+        "status": "Completed",
+        "assigned_to": "Robert Foster",
+        "due_date": "2024-04-29"
+    },
+    {
+        "project": "Core Banking Upgrade",
+        "task_id": "FINDEV-719",
+        "task_description": "Upgrade database schema",
+        "priority": "Medium",
+        "status": "Completed",
+        "assigned_to": "Anthony Williams",
+        "due_date": "2024-07-08"
+    },
+    {
+        "project": "Core Banking Upgrade",
+        "task_id": "FINDEV-573",
+        "task_description": "Integrate new payment API",
+        "priority": "Low",
+        "status": "In Progress",
+        "assigned_to": "George Haney",
+        "due_date": "2024-05-21"
+    },
+    {
+        "project": "Core Banking Upgrade",
+        "task_id": "FINDEV-130",
+        "task_description": "Integrate new payment API",
+        "priority": "Medium",
+        "status": "Not Started",
+        "assigned_to": "Sandra Carroll",
+        "due_date": "2024-05-02"
+    },
+    {
+        "project": "Mobile App Revamp",
+        "task_id": "FINDEV-936",
+        "task_description": "Add fingerprint login feature",
+        "priority": "Low",
+        "status": "In Progress",
+        "assigned_to": "Bridget Miller",
+        "due_date": "2024-05-16"
+    },
+    {
+        "project": "Mobile App Revamp",
+        "task_id": "FINDEV-805",
+        "task_description": "Add fingerprint login feature",
+        "priority": "Medium",
+        "status": "Not Started",
+        "assigned_to": "William Leblanc",
+        "due_date": "2024-06-30"
+    },
+    {
+        "project": "Mobile App Revamp",
+        "task_id": "FINDEV-147",
+        "task_description": "Redesign transaction history page",
+        "priority": "Medium",
+        "status": "Not Started",
+        "assigned_to": "Pamela Wagner",
+        "due_date": "2024-05-26"
+    },
+    {
+        "project": "Core Banking Upgrade",
+        "task_id": "FINDEV-294",
+        "task_description": "Upgrade database schema",
+        "priority": "Low",
+        "status": "In Progress",
+        "assigned_to": "Sandra Carroll",
+        "due_date": "2024-06-23"
+    },
+    {
+        "project": "Core Banking Upgrade",
+        "task_id": "FINDEV-915",
+        "task_description": "Implement new encryption",
+        "priority": "Low",
+        "status": "Not Started",
+        "assigned_to": "Natasha Holden",
+        "due_date": "2024-04-26"
+    },
+    {
+        "project": "Mobile App Revamp",
+        "task_id": "FINDEV-425",
+        "task_description": "Implement push notifications",
+        "priority": "Medium",
+        "status": "In Progress",
+        "assigned_to": "Natasha Holden",
+        "due_date": "2024-07-03"
+    },
+    {
+        "project": "Payment Gateway Integration",
+        "task_id": "FINDEV-781",
+        "task_description": "Test payment gateway resilience",
+        "priority": "Medium",
+        "status": "Completed",
+        "assigned_to": "Sandra Carroll",
+        "due_date": "2024-04-24"
+    },
+    {
+        "project": "Fraud Detection System",
+        "task_id": "FINDEV-608",
+        "task_description": "Implement real-time monitoring",
+        "priority": "Low",
+        "status": "In Progress",
+        "assigned_to": "William Leblanc",
+        "due_date": "2024-04-20"
+    },
+    {
+        "project": "Payment Gateway Integration",
+        "task_id": "FINDEV-207",
+        "task_description": "Test payment gateway resilience",
+        "priority": "Low",
+        "status": "Completed",
+        "assigned_to": "Robert Foster",
+        "due_date": "2024-06-26"
+    },
+    {
+        "project": "Core Banking Upgrade",
+        "task_id": "FINDEV-873",
+        "task_description": "Implement new encryption",
+        "priority": "Medium",
+        "status": "Not Started",
+        "assigned_to": "Joseph Rich",
+        "due_date": "2024-05-09"
+    },
+    {
+        "project": "Mobile App Revamp",
+        "task_id": "FINDEV-113",
+        "task_description": "Redesign transaction history page",
+        "priority": "High",
+        "status": "Completed",
+        "assigned_to": "Elizabeth Turner",
+        "due_date": "2024-04-19"
+    },
+    {
+        "project": "Payment Gateway Integration",
+        "task_id": "FINDEV-524",
+        "task_description": "Test payment gateway resilience",
+        "priority": "Low",
+        "status": "Not Started",
+        "assigned_to": "Pamela Wagner",
+        "due_date": "2024-06-07"
+    },
+    {
+        "project": "Core Banking Upgrade",
+        "task_id": "FINDEV-783",
+        "task_description": "Implement new encryption",
+        "priority": "Medium",
+        "status": "Completed",
+        "assigned_to": "Elizabeth Turner",
+        "due_date": "2024-06-10"
+    },
+    {
+        "project": "Payment Gateway Integration",
+        "task_id": "FINDEV-340",
+        "task_description": "Develop new gateway module",
+        "priority": "Low",
+        "status": "In Progress",
+        "assigned_to": "Bridget Miller",
+        "due_date": "2024-06-12"
+    },
+    {
+        "project": "Payment Gateway Integration",
+        "task_id": "FINDEV-687",
+        "task_description": "Document API changes",
+        "priority": "Low",
+        "status": "In Progress",
+        "assigned_to": "Pamela Wagner",
+        "due_date": "2024-07-03"
+    },
+    {
+        "project": "Payment Gateway Integration",
+        "task_id": "FINDEV-418",
+        "task_description": "Document API changes",
+        "priority": "Medium",
+        "status": "Not Started",
+        "assigned_to": "Joseph Hunt",
+        "due_date": "2024-06-11"
+    },
+    {
+        "project": "Mobile App Revamp",
+        "task_id": "FINDEV-512",
+        "task_description": "Add fingerprint login feature",
+        "priority": "High",
+        "status": "In Progress",
+        "assigned_to": "Bridget Miller",
+        "due_date": "2024-05-04"
+    },
+    {
+        "project": "Core Banking Upgrade",
+        "task_id": "FINDEV-372",
+        "task_description": "Implement new encryption",
+        "priority": "High",
+        "status": "Not Started",
+        "assigned_to": "Darren Lutz",
+        "due_date": "2024-05-14"
+    },
+    {
+        "project": "Fraud Detection System",
+        "task_id": "FINDEV-872",
+        "task_description": "Train model on transaction data",
+        "priority": "Medium",
+        "status": "Completed",
+        "assigned_to": "Elizabeth Turner",
+        "due_date": "2024-05-20"
+    },
+    {
+        "project": "Core Banking Upgrade",
+        "task_id": "FINDEV-751",
+        "task_description": "Implement new encryption",
+        "priority": "Low",
+        "status": "In Progress",
+        "assigned_to": "Bridget Miller",
+        "due_date": "2024-06-27"
+    },
+    {
+        "project": "Core Banking Upgrade",
+        "task_id": "FINDEV-366",
+        "task_description": "Upgrade database schema",
+        "priority": "Low",
+        "status": "In Progress",
+        "assigned_to": "Joseph Rich",
+        "due_date": "2024-07-03"
+    },
+    {
+        "project": "Payment Gateway Integration",
+        "task_id": "FINDEV-302",
+        "task_description": "Develop new gateway module",
+        "priority": "High",
+        "status": "Not Started",
+        "assigned_to": "Joseph Rich",
+        "due_date": "2024-06-12"
+    }
+]
