@@ -1,5 +1,25 @@
 AWSTemplateFormatVersion: "2010-09-09"
 Description: "Proof of concept API with Cloudfront WAF and 3 endpoints with jwt auth"
+
+Parameters:
+    IssuerParameter: 
+        Type: "String" 
+        Description: "Add the directory (tenant) ID between the two // before 
+                      v2.0 in the following url:
+                      https://login.microsoftonline.com//v2.0"
+    
+    AdminAudParameter:
+        Type: "String"
+        Description: "Add the Application (client) ID for the admin app"
+
+    DevAudParameter:
+        Type: "String"
+        Description: "Add the Application (client) ID for the developer app"
+
+    FinancesAudParameter:
+        Type: "String"
+        Description: "Add the Application (client) ID for the financial staff app"
+
 Resources:
     PoCAPI:
         Type: AWS::ApiGatewayV2::Api
@@ -15,8 +35,8 @@ Resources:
             ApiId: !Ref PoCAPI
             ApiKeyRequired: false
             AuthorizationScopes: 
-              - "azuread.scope"
-              - "azurewrite.scope"
+              - "scope.finance"
+              - "scope.admin"
             AuthorizationType: "JWT"
             AuthorizerId: !Ref ApiGatewayV2Authorizer
             RouteKey: "GET /transactions"
@@ -28,7 +48,7 @@ Resources:
             ApiId: !Ref PoCAPI
             ApiKeyRequired: false
             AuthorizationScopes: 
-              - "azuread.scope"
+              - "scope.admin"
             AuthorizationType: "JWT"
             AuthorizerId: !Ref ApiGatewayV2Authorizer
             RouteKey: "GET /employees"
@@ -40,7 +60,8 @@ Resources:
             ApiId: !Ref PoCAPI
             ApiKeyRequired: false
             AuthorizationScopes: 
-              - "azuread.scope"
+              - "scope.admin"
+              - "scope.dev"
             AuthorizationType: "JWT"
             AuthorizerId: !Ref ApiGatewayV2Authorizer
             RouteKey: "GET /devprojects"
@@ -89,21 +110,10 @@ Resources:
             Name: "JWTAuth"
             JwtConfiguration: 
                 Audience: 
-                  - "2453bdf8-806b-4b13-a6d2-8114d2b47198"
-                Issuer: "https://sts.windows.net/41044b51-225a-4a49-8312-0613d4946cff/"
-
-    ApiGatewayV2Authorizer2:
-        Type: "AWS::ApiGatewayV2::Authorizer"
-        Properties:
-            ApiId: !Ref PoCAPI
-            AuthorizerType: "JWT"
-            IdentitySource: 
-              - "$request.header.Authorization"
-            Name: "AzureADB2CJWTAuthorizer"
-            JwtConfiguration: 
-                Audience: 
-                  - "https://patolalive.onmicrosoft.com/89f97c87-c567-4422-b10c-b5f4454fca16"
-                Issuer: "https://patolalive.b2clogin.com/tfp/8d992d27-b56c-4a95-945a-c1e30321fc82/b2x_1_testsso/v2.0/"
+                  - !Ref AdminAudParameter
+                  - !Ref DevAudParameter
+                  - !Ref FinancesAudParameter
+                Issuer: !Ref IssuerParameter
 
     ApiGatewayV2Stage:
         Type: "AWS::ApiGatewayV2::Stage"
