@@ -137,18 +137,6 @@ Resources:
                 CloudWatchMetricsEnabled: true
                 MetricName: WebACLBotAndSecurityProtection
             Rules:
-              - Name: AWSManagedRulesBotControlRuleSet
-                Priority: 11
-                Statement:
-                    ManagedRuleGroupStatement:
-                        VendorName: AWS
-                        Name: AWSManagedRulesBotControlRuleSet
-                OverrideAction:
-                    None: {}
-                VisibilityConfig:
-                    SampledRequestsEnabled: true
-                    CloudWatchMetricsEnabled: true
-                    MetricName: BotControlRule
               - Name: AWSManagedRulesAdminProtectionRuleSet
                 Priority: 21
                 Statement:
