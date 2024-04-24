@@ -4,9 +4,8 @@ Description: "Proof of concept API with Cloudfront WAF and 3 endpoints with jwt 
 Parameters:
     IssuerParameter: 
         Type: "String" 
-        Description: "Add the directory (tenant) ID between the two // before 
-                      v2.0 in the following url:
-                      https://login.microsoftonline.com//v2.0"
+        Description: "Replace <tenantID> with the tenant ID in the following url:
+                      https://login.microsoftonline.com/<tenantID>/v2.0"
     
     AdminAudParameter:
         Type: "String"
@@ -15,6 +14,10 @@ Parameters:
     DevAudParameter:
         Type: "String"
         Description: "Add the Application (client) ID for the developer app"
+
+    MachineAudParameter:
+        Type: "String"
+        Description: "Add the Application (client) ID for the machine app"
 
     FinancesAudParameter:
         Type: "String"
@@ -67,6 +70,16 @@ Resources:
             RouteKey: "GET /devprojects"
             Target: !Sub "integrations/${ApiGatewayV2Integration3}"
 
+    ApiGatewayV2Route4:
+        Type: "AWS::ApiGatewayV2::Route"
+        Properties:
+            ApiId: !Ref PoCAPI
+            ApiKeyRequired: false
+            AuthorizationType: "JWT"
+            AuthorizerId: !Ref ApiGatewayV2Authorizer2
+            RouteKey: "GET /schedule"
+            Target: !Sub "integrations/${ApiGatewayV2Integration}"
+
     ApiGatewayV2Integration:
         Type: "AWS::ApiGatewayV2::Integration"
         Properties:
@@ -83,7 +96,7 @@ Resources:
         Properties:
             ApiId: !Ref PoCAPI
             ConnectionType: "INTERNET"
-            IntegrationMethod: "ANY"
+            IntegrationMethod: "GET"
             IntegrationType: "HTTP_PROXY"
             IntegrationUri: "https://raw.githubusercontent.com/NBIMBachelor/Incorporating-Digital-Identities-Into-APIs/main/MockData/mock_employees.json"
             TimeoutInMillis: 30000
@@ -94,9 +107,20 @@ Resources:
         Properties:
             ApiId: !Ref PoCAPI
             ConnectionType: "INTERNET"
-            IntegrationMethod: "ANY"
+            IntegrationMethod: "GET"
             IntegrationType: "HTTP_PROXY"
             IntegrationUri: "https://raw.githubusercontent.com/NBIMBachelor/Incorporating-Digital-Identities-Into-APIs/main/MockData/mock_devprojects.json"
+            TimeoutInMillis: 30000
+            PayloadFormatVersion: "1.0"
+
+    ApiGatewayV2Integration4:
+        Type: "AWS::ApiGatewayV2::Integration"
+        Properties:
+            ApiId: !Ref PoCAPI
+            ConnectionType: "INTERNET"
+            IntegrationMethod: "GET"
+            IntegrationType: "HTTP_PROXY"
+            IntegrationUri: "https://raw.githubusercontent.com/NBIMBachelor/Incorporating-Digital-Identities-Into-APIs/main/MockData/mock_schedule.json"
             TimeoutInMillis: 30000
             PayloadFormatVersion: "1.0"
 
@@ -113,6 +137,19 @@ Resources:
                   - !Ref AdminAudParameter
                   - !Ref DevAudParameter
                   - !Ref FinancesAudParameter
+                Issuer: !Ref IssuerParameter
+
+    ApiGatewayV2Authorizer2:
+        Type: "AWS::ApiGatewayV2::Authorizer"
+        Properties:
+            ApiId: !Ref PoCAPI
+            AuthorizerType: "JWT"
+            IdentitySource: 
+              - "$request.header.Authorization"
+            Name: "JWTAuth2"
+            JwtConfiguration: 
+                Audience: 
+                  - !Ref MachineAudParameter
                 Issuer: !Ref IssuerParameter
 
     ApiGatewayV2Stage:
