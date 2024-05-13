@@ -4,8 +4,7 @@ Description: "Proof of concept API with Cloudfront WAF and 3 endpoints with jwt 
 Parameters:
     IssuerParameter: 
         Type: "String" 
-        Description: "Replace <tenantID> with the tenant ID in the following url:
-                      https://login.microsoftonline.com/<tenantID>/v2.0"
+        Description: Add the Directory (tenant) ID"
     
     AdminAudParameter:
         Type: "String"
@@ -137,7 +136,7 @@ Resources:
                   - !Ref AdminAudParameter
                   - !Ref DevAudParameter
                   - !Ref FinancesAudParameter
-                Issuer: !Ref IssuerParameter
+                Issuer: !Sub "https://login.microsoftonline.com/${IssuerParameter}/v2.0"
 
     ApiGatewayV2Authorizer2:
         Type: "AWS::ApiGatewayV2::Authorizer"
@@ -150,7 +149,7 @@ Resources:
             JwtConfiguration: 
                 Audience: 
                   - !Ref MachineAudParameter
-                Issuer: !Ref IssuerParameter
+                Issuer: !Sub "https://login.microsoftonline.com/${IssuerParameter}/v2.0"
 
     ApiGatewayV2Stage:
         Type: "AWS::ApiGatewayV2::Stage"
