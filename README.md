@@ -27,10 +27,10 @@ Repeat these steps for each user group, adjusting names and scopes appropriately
 1. **App Registration**:
    - Navigate to `Applications` -> `App registrations` -> `New registration`.
    - Name your registration.
-   - Under `Select platform` select `Web`, and the URL to `https://oauth.pstmn.io/v1/callback`.
+   - Under `Select platform` select `Web`, and set the URL to `https://oauth.pstmn.io/v1/callback`.
    - Click `Register`.
 2. **Edit Manifest**:
-   - In the application tab go to `Manifest`
+   - In the application tab go to `Manifest`.
    - Change `"accessTokenAcceptedVersion": null` to `"accessTokenAcceptedVersion": 2`.
    - Click `Save`.
 3. **API Exposure and Scope**:
@@ -41,11 +41,11 @@ Repeat these steps for each user group, adjusting names and scopes appropriately
       - For financial staff: scope.finance.
    - Set `Who can consent?` to `Admins and Users`.
    - For the rest of the mandatory fields type something that fits.
-   - Click `Add scope`
+   - Click `Add scope`.
 4. **Client Secrets**:
    - Go to `Certificates & Secrets` ->  `New client secret`.
    - Give the secret a fitting name.
-   - Click `Add`
+   - Click `Add`.
    - Save the generated secret as it's shown only once.
 5. **User and Group Assignments**:
    - Go to `Applications` -> `Enterprise applications` -> name of Application just created -> `Users and groups` -> `Add user/group` -> `None Selected`.
@@ -58,7 +58,7 @@ Repeat these steps for each user group, adjusting names and scopes appropriately
    - Name your registration. Leave everything else at default values.
    - Click `Register`.
 2. **Edit Manifest**:
-   - In the application tab go to `Manifest`
+   - In the application tab go to `Manifest`.
    - Change `"accessTokenAcceptedVersion": null` to `"accessTokenAcceptedVersion": 2`.
    - Click `Save`.
 3. **API Exposure and Scope**:
@@ -67,10 +67,10 @@ Repeat these steps for each user group, adjusting names and scopes appropriately
 4. **Client Secrets**:
    - Go to `Certificates & Secrets` ->  `New client secret`.
    - Give the secret a fitting name.
-   - Click `Add`
+   - Click `Add`.
    - Save the generated secret as it's shown only once.
 5. **Conditional Access**:
-   - Go to `Protection` -> `Conditional Access` -> `Named Location` -> `+ IP ranges location`
+   - Go to `Protection` -> `Conditional Access` -> `Named Location` -> `+ IP ranges location`.
    - Give the location a name and make sure `Mark as trusted location` is selected.
    - Click the `+` and add a IPv4 and IPv6 address that fits for the machine that will be requesting tokens from the application. In our case 129.240.0.0/15 and 2001:0700:0300:0000:0000:0000:0000:0000/44 was used, being NTNU's subnets. Then press `Create`.
    - Go to `Overview` -> `Create new policy`.
@@ -99,22 +99,22 @@ Repeat these steps for each user group, adjusting names and scopes appropriately
 4. Select `Create stack` -> `Upload a template file` -> `Choose file` and select the downloaded CloudFormation template -> `Next`.
 5. Enter a stack name as you wish.
 6. Fill out the parameter fields with the information that is asked for and select `Next`.
-7. Select `Submit`.
+7. Click `Submit`.
 
 ## Getting a token
 ### Prerequisites
-- Have Postman or other tool to request tokens. (This guide shows how to do it with postman)
+- Have Postman or other tool to request tokens (This guide shows how to do it with postman).
 
 **End users**
 1. In Postman, go to the `Authorization` tab.
 2. For `Type` select `OAuth 2.0`.
-3. Make sure `Grant Type` is set to `Authorization Code`
+3. Make sure `Grant Type` is set to `Authorization Code`.
 4. Make sure the `Authorize using browser` is checked.
-5. In `Auth URL` input https://login.microsoftonline.com/<Directory (tenant) ID>/oauth2/v2.0/authorize
-6. In `Access Token URL` input https://login.microsoftonline.com/<Directory (tenant) ID>/oauth2/v2.0/token
+5. In `Auth URL` input https://login.microsoftonline.com/<Directory (tenant) ID>/oauth2/v2.0/authorize.
+6. In `Access Token URL` input https://login.microsoftonline.com/<Directory (tenant) ID>/oauth2/v2.0/token.
 7. In `Client ID` input the Application (Client) ID for the application you want a token from (If you want a token that can access the endpoint for Financial Staff, use the Client ID from the Financial Staff app).
-8. In `Client Secret` input the client secret that was saved from earlier for the application you want a token from (If you want a token that can access the endpoint for Financial Staff, use the scope and Client ID from the Financial Staff app).
-9. In `Scope` input the scope for the application you want a token from (If you want a token that can access the endpoint for Financial Staff, use the Client ID from the Financial Staff app).
+8. In `Client Secret` input the client secret that was saved from earlier for the application you want a token from (If you want a token that can access the endpoint for Financial Staff, use the client secret from the Financial Staff app).
+9. In `Scope` input the scope for the application you want a token from (If you want a token that can access the endpoint for Financial Staff, use the scope from the Financial Staff app).
 10. Press `Get New Access Token` and follow the authentication process. When the authentication process is finished, a token should be given. Note down the token.
 
 **Machine-Machine**
@@ -131,7 +131,7 @@ Repeat these steps for each user group, adjusting names and scopes appropriately
 - An access token from the step above.
 
 1. To find the URL for the API, go to CloudFront in AWS, select the CloudFront distribution and copy the URL under `Distribution domain name`.
-2. In Postman, make a new GET request using the URL just found. Append one of the three endpoints to the URL: /transactions, /employees or /devprojects. The access for the different endpoints are as shown in the table.
+2. In Postman, make a new GET request using the URL just found. Append one of the four endpoints to the URL: /transactions, /employees, /devprojects or /schedule. The access for the different endpoints are as shown in the table.
 
 | Group            | /devprojects        | /employees          | /transactions       | /schedule           |
 |------------------|---------------------|---------------------|---------------------|---------------------|
