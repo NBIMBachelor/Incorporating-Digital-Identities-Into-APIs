@@ -7,11 +7,11 @@ This guide provides a setup for integrating digital identities into API authenti
   - [Prerequisites](#prerequisites)
   - [Setup for End Users](#setup-for-end-users)
   - [Setup for Machine-Machine](#setup-for-machine-machine)
-- [Information Needed from Entra Setup for AWS](#information-needed-from-entra-setup-for-aws)
-- [AWS Setup](#aws-setup)
-- [Acquiring Tokens](#acquiring-tokens)
-  - [End Users](#end-users)
-  - [Machine-to-Machine](#machine-to-machine)
+- [Information needed from Entra setup for AWS setup and requesting tokens](#information-needed-from-Entra-setup-for-AWS-setup-and-requesting-tokens)
+- [AWS setup](#aws-setup)
+- [Getting a token](#getting-a-token)
+  - [End users](#end-users)
+  - [Machine-Machine](#machine-machine)
 - [Using the API](#using-the-api)
 
 ## Entra-ID setup
