@@ -27,7 +27,7 @@ Repeat these steps for each user group, adjusting names and scopes appropriately
 1. **App Registration**:
    - Navigate to `Applications` -> `App registrations` -> `New registration`.
    - Name your registration.
-   - Under `Select platform` select `Web`, and set the URL to `https://oauth.pstmn.io/v1/callback`.
+   - Under `Select platform` select `Web`, and set the URL to `https://oauth.pstmn.io/v1/callback` if using Postman for requesting tokens (If using another application to request tokens use the correct callback URL for that application).
    - Click `Register`.
 2. **Edit Manifest**:
    - In the application tab go to `Manifest`.
