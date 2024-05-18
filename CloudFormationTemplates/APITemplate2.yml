@@ -1,5 +1,5 @@
 AWSTemplateFormatVersion: "2010-09-09"
-Description: "Proof of concept API with Cloudfront WAF and 3 endpoints with jwt auth"
+Description: "Proof of concept API with Cloudfront WAF and 4 endpoints with jwt auth"
 
 Parameters:
     IssuerParameter: 
